@@ -28,7 +28,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${display.variable} ${sans.variable}`}>
-      <body className="min-h-screen bg-ivory">
+      <body className="min-h-screen bg-ivory" suppressHydrationWarning>
         <WishlistProvider>
           <CartProvider>{children}</CartProvider>
         </WishlistProvider>
