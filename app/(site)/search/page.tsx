@@ -4,8 +4,6 @@ import SearchFormClient from "./search-form";
 import SearchResults from "./search-results";
 import { Search } from "lucide-react";
 
-export const dynamic = "force-dynamic";
-
 export const metadata = {
   title: "Search | Man Within",
   description: "Search books, authors, articles, and collections.",

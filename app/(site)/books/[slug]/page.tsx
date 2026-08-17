@@ -18,6 +18,10 @@ type PageProps = {
   params: Promise<{ slug: string }>;
 };
 
+export async function generateStaticParams() {
+  return books.map((b) => ({ slug: b.slug }));
+}
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const book = getBookBySlug(slug);

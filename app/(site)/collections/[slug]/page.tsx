@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import {
+  collections,
   getCollectionBySlug,
   booksByIds,
   authors,
@@ -21,6 +22,10 @@ import { Button } from "@/components/ui/Button";
 type PageProps = {
   params: Promise<{ slug: string }>;
 };
+
+export async function generateStaticParams() {
+  return collections.map((c) => ({ slug: c.slug }));
+}
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;

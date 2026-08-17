@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import type { Author } from "@/lib/data";
 import {
+  categories,
   categoryBySlug,
   booksByCategory,
   authors,
@@ -18,6 +19,10 @@ import { Button } from "@/components/ui/Button";
 type PageProps = {
   params: Promise<{ slug: string }>;
 };
+
+export async function generateStaticParams() {
+  return categories.map((c) => ({ slug: c.slug }));
+}
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
