@@ -37,40 +37,23 @@ export function Hero() {
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
-            <Button href="#books" variant="ivory" className="group">
+            <Button href="/books" variant="ivory" className="group">
               Shop Books
               <ArrowRight
                 size={17}
                 className="transition-transform duration-200 group-hover:translate-x-1"
               />
             </Button>
-            <Button href="#journal" variant="outline-light">
+            <Button href="/journal" variant="outline-light">
               Read the Journal
             </Button>
           </div>
 
-          <div className="mt-10 flex items-center gap-6 border-t border-ivory/10 pt-6">
-            <div>
-              <p className="font-display text-2xl font-extrabold">500+</p>
-              <p className="font-sans text-xs font-bold uppercase tracking-[0.12em] text-ivory/50">
-                Curated titles
-              </p>
-            </div>
-            <div className="h-9 w-px bg-ivory/15" aria-hidden="true" />
-            <div>
-              <p className="font-display text-2xl font-extrabold">40+</p>
-              <p className="font-sans text-xs font-bold uppercase tracking-[0.12em] text-ivory/50">
-                African authors
-              </p>
-            </div>
-            <div className="h-9 w-px bg-ivory/15" aria-hidden="true" />
-            <div>
-              <p className="font-display text-2xl font-extrabold">20k+</p>
-              <p className="font-sans text-xs font-bold uppercase tracking-[0.12em] text-ivory/50">
-                Readers & counting
-              </p>
-            </div>
-          </div>
+          <p className="mt-10 border-t border-ivory/10 pt-6 font-sans text-sm font-medium text-ivory/60">
+            Free delivery across Kenya on orders over KES 2,500
+            <span className="mx-2 text-ivory/20" aria-hidden="true">·</span>
+            Independently owned, Nairobi
+          </p>
         </div>
 
         {/* Book composition */}

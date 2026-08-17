@@ -29,8 +29,8 @@ export function JournalPreview() {
         </div>
 
         <div className="mt-12 flex justify-center">
-          <Button href="#" variant="primary" className="group">
-            Explore the Journal
+<Button href="/journal" variant="primary" className="group">
+              Explore the Journal
             <ArrowRight
               size={17}
               className="transition-transform duration-200 group-hover:translate-x-1"

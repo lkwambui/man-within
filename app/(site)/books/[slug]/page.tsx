@@ -10,10 +10,8 @@ import Link from "next/link";
 import { Breadcrumbs, type Crumb } from "@/components/ui/Breadcrumbs";
 import { BookCover } from "@/components/books/BookCover";
 import { Rating } from "@/components/ui/Rating";
-import { QtySelector } from "@/components/ui/QtySelector";
-import { AddToBagButton } from "@/components/ui/AddToBagButton";
-import { Button } from "@/components/ui/Button";
 import { BookCarousel } from "@/components/books/BookCarousel";
+import BookPurchaseActions from "./BookPurchaseActions";
 import BookTabsClient from "./BookTabsClient";
 
 type PageProps = {
@@ -153,11 +151,7 @@ function BookDetails({
         </p>
       </div>
       <div className="mt-6 flex flex-col gap-3">
-        <QtySelector qty={1} onChange={() => {}} />
-        <AddToBagButton book={book} size="lg" />
-        <Button variant="accent" href={`/checkout?book=${book.id}`} className="w-full">
-          Buy now
-        </Button>
+        <BookPurchaseActions book={book} />
       </div>
     </div>
   );
