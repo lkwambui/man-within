@@ -4,7 +4,14 @@ const nextConfig = {
   trailingSlash: process.env.NODE_ENV === "production",
   basePath: process.env.NODE_ENV === "production" ? "/man-within" : undefined,
   images: {
-    unoptimized: process.env.NODE_ENV === "production",
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        pathname: "/**",
+      },
+    ],
+    unoptimized: true,
   },
   eslint: {
     ignoreDuringBuilds: true,
