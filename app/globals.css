@@ -5,6 +5,8 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   body {
@@ -18,7 +20,7 @@
 
 @layer components {
   .container-site {
-    @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+    @apply mx-auto w-full max-w-[1200px] px-5 sm:px-8 lg:px-10;
   }
 
   .btn {
@@ -55,6 +57,38 @@
 
   .section-kicker {
     @apply font-sans text-sm font-extrabold uppercase tracking-[0.14em] text-burgundy;
+  }
+
+  .display-xl {
+    @apply font-display text-[2.6rem] font-extrabold leading-[1.05] tracking-tight sm:text-6xl lg:text-[4rem];
+  }
+
+  .display-lg {
+    @apply font-display text-2xl font-extrabold leading-snug tracking-tight sm:text-3xl lg:text-[2.5rem];
+  }
+
+  .body-lg {
+    @apply font-sans text-lg font-medium leading-relaxed;
+  }
+
+  .meta-xs {
+    @apply font-sans text-[11px] font-extrabold uppercase tracking-[0.12em];
+  }
+
+  .prose-man-within {
+    @apply max-w-3xl mx-auto space-y-6;
+  }
+
+  .prose-man-within h2 {
+    @apply font-display text-2xl font-extrabold text-ink mt-10 mb-3 tracking-tight;
+  }
+
+  .prose-man-within p {
+    @apply font-sans text-[17px] leading-[1.75] text-ink/75;
+  }
+
+  .prose-man-within blockquote {
+    @apply border-l-4 border-burgundy/40 pl-5 py-1 my-8 font-display text-xl italic text-ink/80;
   }
 }
 

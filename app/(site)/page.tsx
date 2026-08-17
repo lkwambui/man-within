@@ -1,11 +1,12 @@
 import { Hero } from "@/components/home/Hero";
 import { Discovery } from "@/components/home/Discovery";
 import { FeaturedBooks } from "@/components/home/FeaturedBooks";
+import { NewArrivals } from "@/components/home/NewArrivals";
 import { Collections } from "@/components/home/Collections";
 import { JournalPreview } from "@/components/home/JournalPreview";
-import { AuthorsPreview } from "@/components/home/AuthorsPreview";
-import { ReadingLists } from "@/components/home/ReadingLists";
 import { Newsletter } from "@/components/home/Newsletter";
+import { ReadingLists } from "@/components/home/ReadingLists";
+import { AuthorsPreview } from "@/components/home/AuthorsPreview";
 
 export default function Home() {
   return (
@@ -13,11 +14,12 @@ export default function Home() {
       <Hero />
       <Discovery />
       <FeaturedBooks />
+      <NewArrivals />
       <Collections />
       <JournalPreview />
-      <AuthorsPreview />
-      <ReadingLists />
       <Newsletter />
+      <ReadingLists />
+      <AuthorsPreview />
     </>
   );
 }
