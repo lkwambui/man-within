@@ -2,7 +2,7 @@
 const nextConfig = {
   output: process.env.NODE_ENV === "production" ? "export" : undefined,
   trailingSlash: process.env.NODE_ENV === "production",
-  basePath: process.env.NODE_ENV === "production" ? "/man-within" : undefined,
+  
   images: {
     remotePatterns: [
       {
