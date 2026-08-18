@@ -21,7 +21,16 @@ export const metadata: Metadata = {
   title: "Man Within: Books. Ideas. Stories.",
   description:
     "A Kenyan bookstore and editorial platform. Explore remarkable books, thoughtful ideas, and stories from Kenya and beyond.",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16.png", sizes: "16x16", type: "image/png" },
+    ],
+  },
 };
+
+export const viewport = "width=device-width, initial-scale=1, maximum-scale=5";
 
 export default function RootLayout({
   children,
