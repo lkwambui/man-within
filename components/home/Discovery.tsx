@@ -63,8 +63,8 @@ export function Discovery() {
           </button>
         </form>
 
-        <div className="mt-9 flex gap-2.5 overflow-x-auto touch-pan-x overscroll-contain scrollbar-hide pb-2">
-          {discoveryFilters.map((chip) => {
+        <div className="mt-9 flex gap-2.5 overflow-x-auto overscroll-contain scrollbar-hide pb-2">
+            {discoveryFilters.map((chip) => {
             const Icon = chipIcons[chip.id] ?? ChevronDown;
             const isActive = active === chip.id;
             return (

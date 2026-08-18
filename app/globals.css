@@ -100,9 +100,6 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
-  .touch-pan-x {
-    touch-action: pan-x;
-  }
   .overscroll-contain {
     overscroll-behavior-x: contain;
   }
