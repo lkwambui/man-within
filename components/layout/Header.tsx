@@ -82,7 +82,7 @@ export function Header() {
           </Link>
 
           <div className="ml-3 hidden md:block">
-            <Button href="/books" variant="primary">Shop Books</Button>
+            <Button href="/books" variant="outline" className="!px-4 !py-2 !text-sm">Shop Books</Button>
           </div>
 
           <button
