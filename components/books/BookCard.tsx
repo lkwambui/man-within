@@ -13,7 +13,7 @@ export function BookCard({
   fluid?: boolean;
 }) {
   return (
-    <article className={cn(fluid ? "w-full" : "group w-[240px] shrink-0 sm:w-[256px]")}>
+    <article className={cn(fluid ? "w-full" : "group w-full max-w-[240px] shrink-0 sm:max-w-[256px]")}>
       <div className="relative rounded-card shadow-card transition-shadow duration-300 group-hover:shadow-lift">
         <div className="relative">
           <Link href={`/books/${book.slug}`} aria-label={`View ${book.title} by ${book.author}`}>

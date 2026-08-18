@@ -26,7 +26,7 @@ export function BookCarousel({ books }: { books: Book[] }) {
         tabIndex={0}
         role="region"
         aria-label="Featured books"
-        className="scrollbar-hide flex snap-x snap-mandatory gap-5 overflow-x-auto pb-2 pt-1"
+        className="flex snap-x snap-mandatory gap-5 overflow-x-auto pb-2 pt-1 touch-pan-x overscroll-contain scrollbar-hide"
       >
         {books.map((book) => (
           <div key={book.id} className="snap-start">

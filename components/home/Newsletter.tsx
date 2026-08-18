@@ -46,7 +46,7 @@ export function Newsletter() {
                 placeholder="Enter your email"
                 className="w-full rounded-full border border-ink/10 bg-white px-5 py-3 font-sans text-sm font-semibold text-ink placeholder:text-ink/40 focus:border-forest focus:outline-none focus:ring-2 focus:ring-forest/30"
               />
-              <button type="submit" className="btn-primary shrink-0 !rounded-full">
+              <button type="submit" className="btn-primary rounded-full">
                 Subscribe
                 <Send size={16} />
               </button>

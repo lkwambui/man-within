@@ -13,10 +13,12 @@ export function BookCover({
   book,
   className,
   priority = false,
+  sizes = "(min-width: 1024px) 50vw, (min-width: 640px) 33vw, 50vw",
 }: {
   book: Book;
   className?: string;
   priority?: boolean;
+  sizes?: string;
 }) {
   const [failed, setFailed] = useState(false);
 
@@ -32,6 +34,7 @@ export function BookCover({
         width={500}
         height={760}
         priority={priority}
+        sizes={sizes}
         onError={() => setFailed(true)}
         className="h-full w-full object-cover"
       />

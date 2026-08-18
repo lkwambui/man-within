@@ -6,6 +6,7 @@ import { useState } from "react";
 import { NAV_LINKS } from "@/lib/data";
 import { Button } from "@/components/ui/Button";
 import { useCart } from "@/lib/store";
+import { cn } from "@/lib/utils";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -56,7 +57,7 @@ export function Header() {
           <Link
             href="/account"
             aria-label="Account"
-            className="hidden h-11 w-11 items-center justify-center rounded-full text-ink/70 transition-colors duration-200 hover:bg-sand hover:text-forest focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/60 md:flex"
+            className="flex h-11 w-11 items-center justify-center rounded-full text-ink/70 transition-colors duration-200 hover:bg-sand hover:text-forest focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/60 hidden md:flex"
           >
             <User size={20} />
           </Link>
@@ -114,7 +115,7 @@ export function Header() {
               ))}
             </ul>
             <div className="mt-5 px-4 pb-3">
-              <Button href="/books" className="w-full !py-3.5">Shop Books</Button>
+              <Button href="/books" variant="primary" className="w-full py-3.5 !rounded-full">Shop Books</Button>
             </div>
           </nav>
         </div>

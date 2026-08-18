@@ -13,9 +13,9 @@ const favourite = books.find((b) => b.id === "kintu")!;
 export function Hero() {
   return (
     <section className="overflow-hidden bg-forest text-ivory">
-      <div className="container-site grid items-center gap-14 py-20 lg:grid-cols-[1fr_minmax(0,1.1fr)] lg:gap-10 lg:py-28">
+      <div className="container-site grid items-center gap-10 py-14 lg:grid-cols-[1fr_minmax(0,1.1fr)] lg:gap-10 lg:py-28">
         {/* Copy */}
-        <div className="max-w-lg animate-fade-up">
+        <div className="max-w-lg">
           <p className="meta-xs text-ivory/60">
             Books for curious minds
           </p>
@@ -31,24 +31,24 @@ export function Hero() {
             </span>
           </h1>
 
-          <p className="body-lg mt-6 max-w-md text-ivory/65">
+          <p className="body-lg mt-5 max-w-md text-ivory/65">
             Discover stories, ideas and perspectives worth spending time with. We curate remarkable books from Kenya and beyond for readers who care.
           </p>
 
-          <div className="mt-9 flex flex-wrap items-center gap-3">
-            <Button href="/books" variant="ivory" className="group">
+          <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-3">
+            <Button href="/books" variant="ivory" className="group w-full sm:w-auto justify-center">
               Explore Books
               <ArrowRight
                 size={17}
                 className="transition-transform duration-200 group-hover:translate-x-1"
               />
             </Button>
-            <Button href="/journal" variant="outline-light">
+            <Button href="/journal" variant="outline-light" className="w-full sm:w-auto justify-center">
               Read Journal
             </Button>
           </div>
 
-          <p className="mt-10 border-t border-ivory/10 pt-5 font-sans text-sm font-medium text-ivory/55">
+          <p className="mt-8 border-t border-ivory/10 pt-5 font-sans text-sm font-medium text-ivory/55">
             Free delivery across Kenya on orders over KES 2,500
             <span className="mx-2.5 text-ivory/20" aria-hidden="true">·</span>
             Independently owned, Nairobi
@@ -66,7 +66,7 @@ export function Hero() {
             aria-hidden="true"
           />
 
-          <div className="relative flex items-center justify-center py-10">
+          <div className="relative flex items-center justify-center py-8">
             {/* Behind left */}
             <BookCover
               book={sideLeft}

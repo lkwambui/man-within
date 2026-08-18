@@ -1,5 +1,6 @@
 import { BookOpen, Globe2, Users, Heart, BookMarked, Sparkles } from "lucide-react";
 import Link from "next/link";
+import { SmartImage } from "@/components/ui/SmartImage";
 
 export default function AboutPage() {
   return (
@@ -46,10 +47,12 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="overflow-hidden rounded-card bg-sand/60 shadow-soft">
-              <img
+              <SmartImage
                 src="/images/list-kenya.jpg"
                 alt="A person browsing shelves in a library"
-                className="aspect-[4/5] w-full object-cover"
+                className="rounded-card bg-sand/60 shadow-card"
+                imgClassName="aspect-[4/5] w-full object-cover"
+                sizes="(min-width: 768px) 50vw, 100vw"
               />
             </div>
           </div>
@@ -93,10 +96,12 @@ export default function AboutPage() {
         <div className="container-site">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
             <div className="overflow-hidden rounded-card shadow-card">
-              <img
+              <SmartImage
                 src="/images/author-owuor.jpg"
                 alt="Contemporary Kenyan literature"
-                className="aspect-[4/3] w-full object-cover"
+                className="rounded-card shadow-card"
+                imgClassName="aspect-[4/3] w-full object-cover"
+                sizes="(min-width: 768px) 50vw, 100vw"
               />
             </div>
             <div>
@@ -145,10 +150,12 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="overflow-hidden rounded-card shadow-card">
-              <img
+              <SmartImage
                 src="/images/col-think.jpg"
                 alt="Quiet library reading room"
-                className="aspect-[4/3] w-full object-cover"
+                className="rounded-card shadow-card"
+                imgClassName="aspect-[4/3] w-full object-cover"
+                sizes="(min-width: 768px) 50vw, 100vw"
               />
             </div>
           </div>

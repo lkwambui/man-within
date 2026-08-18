@@ -40,10 +40,10 @@ export function Discovery() {
         {/* Search */}
         <form
           role="search"
-          className="mx-auto mt-10 flex items-center gap-2 rounded-2xl border border-ink/10 bg-ivory/60 p-2 shadow-card"
+          className="mx-auto flex flex-col sm:flex-row items-stretch gap-2 rounded-2xl border border-ink/10 bg-ivory/60 p-2 shadow-card"
           onSubmit={(e) => e.preventDefault()}
         >
-          <span className="pl-3 text-moss">
+          <span className="pl-3 text-moss flex items-center">
             <Search size={22} />
           </span>
           <label htmlFor="site-search" className="sr-only">
@@ -57,14 +57,13 @@ export function Discovery() {
           />
           <button
             type="submit"
-            className="btn-primary shrink-0 !rounded-xl px-8 py-3.5"
+            className="btn-primary rounded-xl px-6 py-3.5 sm:px-8"
           >
             Search
           </button>
         </form>
 
-        {/* Filter chips */}
-        <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
+        <div className="mt-9 flex gap-2.5 overflow-x-auto touch-pan-x overscroll-contain scrollbar-hide pb-2">
           {discoveryFilters.map((chip) => {
             const Icon = chipIcons[chip.id] ?? ChevronDown;
             const isActive = active === chip.id;
@@ -74,7 +73,7 @@ export function Discovery() {
                 type="button"
                 aria-pressed={isActive}
                 onClick={() => setActive(chip.id)}
-                className={cn("chip !px-5 !py-2.5", isActive && "chip-active")}
+                className={cn("chip shrink-0 px-5 py-2.5", isActive && "chip-active !text-ivory")}
               >
                 <Icon size={16} />
                 {chip.label}
